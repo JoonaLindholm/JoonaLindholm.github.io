@@ -167,17 +167,15 @@ nav ul li a {
     border-radius: 25%; 
 }
 footer {
-    position: fixed;
+    position: absolute;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: center;
+    block-size: 99%;
+    bottom:0;
+    top: 98%;
+    margin-top: 2%;
     color: #ffffff;
-    text-align: end;
-    bottom: 0;
-    left: 0;
-    width: 98%;
-    z-index: 1;
-    
+    text-align: center;
 }
 
 @media only screen and (max-width: 900px) and (max-height: 700px) {
