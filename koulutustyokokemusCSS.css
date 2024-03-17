@@ -92,13 +92,9 @@ footer {
     transform: translateX(-50%);
     box-shadow:
         0 0 15px white,
-        /* Yläpuolelle */
         0 0 15px white,
-        /* Alapuolelle */
         0 0 15px white,
-        /* Oikealle */
         0 0 15px white;
-    /* Vasemmalle */
     transition: box-shadow 0.3s ease, border-width 0.3s ease;
 }
 
@@ -207,7 +203,7 @@ nav ul li {
     z-index: 2;
 }
     .viiva {
-        top: 50%; /* Asetetaan viiva keskelle */
+        top: 50%; 
         width: 100%;
         height: 1.7px;
         margin-top: 5%;
@@ -228,7 +224,7 @@ nav ul li {
         align-items: center;
         color: white;
         z-index: 3;
-        margin-bottom: 10%; /* Pienennetty suuremmasta arvosta */
+        margin-bottom: 10%; 
         margin-top: 5%;
         filter: brightness(100%);
     }
@@ -238,8 +234,8 @@ nav ul li {
         flex-direction: column;
         align-items: center;
         color: white;
-        margin-top: 10%; /* Lisätty marginaalia yläosaan */
-        margin-bottom: 15%; /* Lisätty marginaalia alaosaan */
+        margin-top: 10%; 
+        margin-bottom: 15%; 
         filter: brightness(100%);
         z-index: 3;
     }
