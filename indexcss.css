@@ -181,7 +181,7 @@ footer {
 }
 @media only screen and (max-width: 900px)
 {
-    .backgroung-image {
+    .background-image {
         width: 100%;
         height: 100%;
         position: fixed;
@@ -288,17 +288,41 @@ footer {
         z-index: 1;
         box-shadow: 0 0 100px white;
     }
-    .nav ul li a img {
-        display: inline-block;
-        vertical-align: middle;
-        margin: 0 auto; 
-        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
-        border: 3px solid white; 
-        border-radius: 25%;
-        padding: 10px; 
-        transition: box-shadow 0.3s ease, border-width 0.3s ease; 
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; /* Keskitetään vaakasuunnassa */
+        align-items: flex-end; /* Sijoitetaan alareunaan */
+        bottom: 100px;
+        width: 100%;
     }
-
+    
+    nav ul {
+        list-style-type: none;
+        padding: 2vh;
+    }
+    
+    nav ul li {
+        display: inline;
+        margin-right: 2vh;
+        color: #ffffff;
+        padding: 2vh;
+    }
+    
+    .nav ul li a img {
+        display: block;
+        margin: 0 auto;
+        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+    }
+    
+    .nav ul li a {
+        color: #ffffff;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 footer {
     position: absolute;
     display: flex;
