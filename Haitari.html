@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bootstrap Perusrunko – Haitari</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap JS Bundle (sis. Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="bg-dark text-white">
+
+  <!-- Navigaatio -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent p-1 rounded mt-1">
+    <div class="container">
+      <!-- Brändi -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="Kuvat/Naurulogo.png" alt="Logo" height="100" class="me-1">
+        Bootstrap Training Site
+      </a>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navigaatio" aria-controls="navigaatio"
+              aria-expanded="false" aria-label="Valikon vaihto">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Linkit -->
+      <div class="collapse navbar-collapse" id="navigaatio">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Etusivu</a></li>
+          <li class="nav-item"><a class="nav-link" href="Karuselli.html">Karuselli</a></li>
+          <li class="nav-item"><a class="nav-link" href="Ruudukko.html">Ruudukko</a></li>
+          <li class="nav-item"><a class="nav-link" href="Kortit.html">Kortit</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="Haitari.html">Haitari</a></li>
+          <li class="nav-item"><a class="nav-link" href="Taulukko.html">Taulukko</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Otsikko -->
+  <div class="container mt-5">
+    <h2 class="mb-4 text-center">Vitsi-haitari! Tekoälyn keksimiä (kuivia) vitsejä ja kuvia vuodenajoista</h2>
+
+    <div class="accordion fade-accordion" id="accordionExample">
+
+      <!-- Item 1 – Kesä -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+            <strong>Kesä</strong>
+          </button>
+        </h2>
+        <!-- Jos haluat suljettuna alussa, poista 'show' seuraavasta divistä -->
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample"
+             aria-labelledby="headingOne">
+          <div class="accordion-body">
+            <div class="row align-items-center">
+              <div class="col-md-4 mb-3">
+                <img src="Kuvat/Kesävitsi.png" class="img-fluid rounded" alt="Kesä">
+              </div>
+              <div class="col-md-8">
+                <p>Yritin olla tänään ahkera ja siivota, mutta aurinko paistoi niin kovaa, että päätettiin lopulta siivousvälineiden kanssa mennä yhdessä terassille huilaamaan.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 – Syksy -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                  aria-expanded="false" aria-controls="collapseTwo">
+            <strong>Syksy</strong>
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample"
+             aria-labelledby="headingTwo">
+          <div class="accordion-body">
+            <div class="row align-items-center">
+              <div class="col-md-4 mb-3">
+                <img src="Kuvat/Syksyvitsi.png" class="img-fluid rounded" alt="Syksy">
+              </div>
+              <div class="col-md-8">
+                <p>Sanoin itselleni aamulla: ”Nukun vielä viisi minuuttia.” Puolitoista tuntia myöhemmin heräsin ja totesin, että syksy on taas tehnyt tehtävänsä.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 – Talvi -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                  aria-expanded="false" aria-controls="collapseThree">
+            <strong>Talvi</strong>
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample"
+             aria-labelledby="headingThree">
+          <div class="accordion-body">
+            <div class="row align-items-center">
+              <div class="col-md-4 mb-3">
+                <img src="Kuvat/Talvivitsi.png" class="img-fluid rounded" alt="Talvi">
+              </div>
+              <div class="col-md-8">
+                <p>Aamulla ajattelin olevani sankari ja lähteä lenkille. Avasin oven, katsoin pakkasta ja päätin olla sankari sisätiloissa.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4 – Kevät -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                  aria-expanded="false" aria-controls="collapseFour">
+            <strong>Kevät</strong>
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample"
+             aria-labelledby="headingFour">
+          <div class="accordion-body">
+            <div class="row align-items-center">
+              <div class="col-md-4 mb-3">
+                <img src="Kuvat/Kevätvitsi.png" class="img-fluid rounded" alt="Kevät">
+              </div>
+              <div class="col-md-8">
+                <p>Tuli kevätfiilis ja päätin aloittaa uuden, terveellisen elämän. Päivitin jääkaapin inventaarion ja löysin lopulta vain suklaan. Päätin aloittaa huomenna.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /accordion -->
+  </div><!-- /container -->
+
+  <!-- Footer -->
+  <footer class="bg-transparent text-light mt-5">
+    <div class="container py-3">
+
+      <!-- Ylärivi: logo + nimi + nav -->
+      <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+        <a class="d-flex align-items-center text-decoration-none text-light" href="index.html">
+          <img src="Kuvat/Naurulogo.png" alt="Logo" height="48" class="me-2">
+          <span>Bootstrap Training Site</span>
+        </a>
+
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link px-2 text-light" href="index.html">Etusivu</a></li>
+          <li class="nav-item"><a class="nav-link px-2 text-light" href="Karuselli.html">Karuselli</a></li>
+          <li class="nav-item"><a class="nav-link px-2 text-light" href="Ruudukko.html">Ruudukko</a></li>
+          <li class="nav-item"><a class="nav-link px-2 text-light" href="Kortit.html">Kortit</a></li>
+          <li class="nav-item"><a class="nav-link px-2 text-light" href="Haitari.html">Haitari</a></li>
+          <li class="nav-item"><a class="nav-link px-2 text-light" href="Taulukko.html">Taulukko</a></li>
+        </ul>
+      </div>
+
+      <hr class="opacity-50 my-3">
+
+      <!-- Alarivi -->
+      <div class="d-flex justify-content-center">
+        <small class="opacity-75" style="font-size:.875rem;">
+          <em>Sivuston kuvat ja osa teksteistä on luotu tekoälyllä.</em>
+        </small>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
