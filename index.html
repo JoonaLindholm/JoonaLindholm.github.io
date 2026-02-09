@@ -13,7 +13,7 @@
 
   <!-- PIENTÄ KÄYTTÖMUKAVUUTTA: ankkurilinkkien offset, jotta otsikko ei jää navin alle -->
   <style>
-    :target { scroll-margin-top: 1px; }
+    :target { scroll-margin-top: 90px; }
 
     /* Bränditeksti saa rivittyä/kutistua vastuullisesti */
     .navbar .navbar-brand { white-space: normal; }
@@ -42,7 +42,7 @@
       <!-- Brändi: logo (saa kutistua) + teksti (saa rivittyä) -->
       <a class="navbar-brand d-flex align-items-center gap-1 flex-shrink-0" href="#" aria-label="Etusivu">
         <!-- Vaihdettu class brand-logo ja poistettu kiinteä height: hallitaan CSS:llä -->
-        <img src="Designer (18).PNG" alt="Sivuston logo" class="brand-logo me-1 flex-shrink-0">
+        <img src="kuvat/logo.png" alt="Sivuston logo" class="brand-logo me-1 flex-shrink-0">
         <span class="brand-text text-break" style="min-width:0;">Bootstrap Training Site</span>
       </a>
 
@@ -70,22 +70,27 @@
     </div>
   </nav>
 
-  <!-- ======= PÄÄSISÄLTÖ =======
-       - Käytä semanttista <main> + id="main" (skip-link kohde)
+  <!-- Etusivun sisältö
+       - Tervetuloa container, jossa selitetty sivuston tarkoitusta ja toinen container, jossa tarkennetaan vielä.
+       - Molemmissa containereissa on aria-labelledby, joka tuo tietoa ruudunlukijalle osuuksista. Auttaa saavutettavuudessa.
   -->
   <main id="main">
-    <!-- Hero-tyyppinen tervetuloboksi -->
-    <section class="container bg-dark text-white p-3 shadow-lg rounded mt-1" aria-labelledby="otsikko-tervetuloa">
-      <h1 id="otsikko-tervetuloa" class="text-center">Tervetuloa sivulleni!</h1>
-      <!-- Käytä mieluummin utiliteettia mt-3 kuin <br> -->
+    <!-- tervetuloboksi container, jossa määritelty kaikki containerin sisällä olevat tyylit jne. tumma tausta, valkoinen teksti, pyöristetyt reunat -->
+    <section class="container bg-dark text-white p-3 shadow-lg rounded mt-1" aria-labelledby="etusivu-tervetuloa">
+      <!-- otsikko, laitettu keskelle boksia-->
+      <h1 id="etusivu-tervetuloa" class="text-center">Tervetuloa sivulleni!</h1>
+      <!-- teksti otsikon alla, keskitetty ja ylämarginaalia 3 (16 pikseliä) -->
       <p class="text-center mt-3">
         Tämä on Bootstrapin avulla tehty sivu. Tarkoituksena on harjoitella Bootstrapin käyttöä.
       </p>
     </section>
 
-    <!-- Lyhyt sisältö: mitä sivustolta löytyy -->
-    <section class="container bg-dark text-white p-3 shadow-lg rounded mt-5" aria-labelledby="otsikko-sisalto">
-      <h2 id="otsikko-sisalto" class="text-center">Mitä sivustolta löytyy?</h2>
+    <!-- mitä sivustolta löytyy osuus, joka on myös container-->
+    <!-- sisältö laatikon tyyli on sama kuin ensimmäisessä laatikossa-->
+    <section class="container bg-dark text-white p-3 shadow-lg rounded mt-5" aria-labelledby="etusivu-sisalto">
+      <!-- toisen laatikon otsikko osuus h2, keskitettynä-->
+      <h2 id="etusivu-sisalto" class="text-center">Mitä sivustolta löytyy?</h2>
+      <!-- tekstis keskitettynä, ylä tekstille annettu marginaalia otsikon kanssa. Sopii ylemmän laatikon tyyliin-->
       <p class="text-center mt-3">Täältä löytyy Bootstrapin ominaisuuksia eroteltuna omiksi sivuiksi.</p>
       <p class="text-center">Voit navigoida tutkimaan eri ominaisuuksia navigaatiopalkista!</p>
     </section>
@@ -101,7 +106,7 @@
       <!-- Ylärivi: logo + nimi + kevyt footer-navi -->
       <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
         <a class="d-flex align-items-center text-decoration-none text-light" href="#" aria-label="Etusivu">
-          <img src="Designer (18).PNG" alt="Sivuston logo" height="48" class="me-2">
+          <img src="kuvat/logo.png" alt="Sivuston logo" height="48" class="me-2">
           <span>Bootstrap Training Site</span>
         </a>
 
