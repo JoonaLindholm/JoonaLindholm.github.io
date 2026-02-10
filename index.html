@@ -32,46 +32,87 @@
     Siirry sisältöön
   </a>
 
-  <!-- ======= NAVIGAATIO =======
-       - .navbar-expand-lg: mobiilissa kollapsoituu, lg:stä ylöspäin auki
-       - .bg-transparent: läpinäkyvä tausta (näyttää teeman värit alta)
-  -->
-<nav class="navbar navbar-dark bg-transparent">
-  <div class="container d-flex justify-content-between align-items-center">
+ <!-- ======= NAVIGAATIO =======
+     - .navbar-expand-lg: mobiilissa kollapsoituu, lg:stä ylöspäin auki
+     - .navbar-dark: vaalea teksti tummalle taustalle
+     - .bg-transparent: läpinäkyvä tausta
+-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent p-1 rounded mt-1"
+     aria-label="Päävalikko">
 
-    <!-- Logo + nimi -->
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="Kuvat/Logo.png" alt="" height="32" class="me-2">
-      Bootstrap Training Site
+  <!-- .container hoitaa navbarin leveyden ja sisäisen flexin -->
+  <div class="container">
+
+    <!-- Brändi: logo + teksti -->
+    <!-- .navbar-brand on aina vasemmalla -->
+    <a class="navbar-brand d-flex align-items-center gap-1" href="#" aria-label="Etusivu">
+      <img src="Kuvat/Logo.png"
+           alt="Sivuston logo"
+           class="brand-logo me-1">
+      <span class="brand-text text-break">Bootstrap Training Site</span>
     </a>
 
-    <!-- KÄÄRE: ankkuroimme valikon napin alle -->
-    <div class="position-relative">
+    <!-- Hampurilaisnappi -->
+    <!-- data-bs-toggle="collapse" = avaa/sulkee -->
+    <!-- data-bs-target viittaa alla olevaan #navigaatio-diviin -->
+    <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navigaatio"
+            aria-controls="navigaatio"
+            aria-expanded="false"
+            aria-label="Valikon vaihto">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <!-- Hampurilaisnappi -->
-      <button class="navbar-toggler" type="button"
-              data-bs-toggle="collapse" data-bs-target="#navMenu"
-              aria-controls="navMenu" aria-expanded="false" aria-label="Valikon vaihto">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- Navigaation linkit -->
+    <!-- .collapse = piilossa mobiilissa -->
+    <!-- .navbar-collapse = Bootstrapin navbar-logiikka -->
+    <!-- .ms-auto = työntää linkit oikealle leveillä näytöillä -->
+    <div class="collapse navbar-collapse ms-auto" id="navigaatio">
+      <ul class="navbar-nav mb-2 mb-lg-0">
 
-      <!-- VALIKKO: aina sama, avautuu napin ALLE -->
-      <!-- Linkit: oikealle leveillä näytöillä (justify-content-end) -->
-      <div class="collapse navbar-collapse" id="navigaatio">
-        <ul class="navbar-nav mb-2 mb-lg-0">
-          <!-- HUOM: pidä hrefit oikeisiin sivuihin/ankkureihin -->
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Etusivu</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://joonalindholm.github.io/Karuselli.html">Karuselli</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://joonalindholm.github.io/Ruudukko.html">Ruudukko</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://joonalindholm.github.io/Kortit.html">Kortit</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://joonalindholm.github.io/Haitari.html">Haitari</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://joonalindholm.github.io/Taulukko.html">Taulukko</a></li>
-        </ul>
-      </div>
+        <!-- Aktiivinen sivu -->
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Etusivu</a>
+        </li>
 
+        <li class="nav-item">
+          <a class="nav-link" href="https://joonalindholm.github.io/Karuselli.html">
+            Karuselli
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://joonalindholm.github.io/Ruudukko.html">
+            Ruudukko
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://joonalindholm.github.io/Kortit.html">
+            Kortit
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://joonalindholm.github.io/Haitari.html">
+            Haitari
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://joonalindholm.github.io/Taulukko.html">
+            Taulukko
+          </a>
+        </li>
+
+      </ul>
     </div>
+
   </div>
 </nav>
+
 
   <!-- Etusivun sisältö
        - Tervetuloa container, jossa selitetty sivuston tarkoitusta ja toinen container, jossa tarkennetaan vielä.
