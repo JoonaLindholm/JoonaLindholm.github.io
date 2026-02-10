@@ -20,17 +20,17 @@
     .brand-text { line-height: 1.1; }
 
     /* Logo skaalautuu näytön mukaan */
-    .brand-logo {
-      height: clamp(36px, 8vw, 84px);
-      width: auto;
-      object-fit: contain;
+    /*.brand-logo {
+    height: clamp(44px, 6vw, 84px);
+    width: auto;
+    object-fit: contain;
     }
 
     /* Erittäin kapeat näytöt. En saanut sivua skaalautumaan omaan puhelimeeni ilman tätä */
-    @media (max-width: 400px) {
+    /*@media (max-width: 400px) {
       .brand-logo { height: 36px; }
       .brand-text { font-size: .9rem; }
-    }
+    } */
   </style>
 </head>
   
@@ -42,7 +42,7 @@
       - Toimii kapeilla näytöillä. Gridillä myös oma sivu, mutta toimi jo tässä.
       - Navbari läpinäkyväksi
   -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent p-1 mt-1"
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent p-4"
        aria-label="Päävalikko">
 
     <div class="container">
@@ -50,19 +50,19 @@
       <div class="row align-items-center w-100">
         
  <!-- Vasen: Logo -->
-      <div class="col-4 d-flex align-items-center">
+      <div class="col-auto d-flex align-items-center">
         <a class="navbar-brand d-flex align-items-center gap-1" href="#" aria-label="Etusivu">
-          <img src="Kuvat/Logo.png" alt="Sivuston logo" class="brand-logo me-1">
+          <img src="Kuvat/Logo.png" alt="Sivuston logo" height="48" class="me-2">
         </a>
       </div>
 
       <!-- Keskellä: Teksti -->
-      <div class="col-4 d-flex justify-content-center">
-        <span class="brand-text">Bootstrap Training Site</span>
+      <div class="col-6 d-flex justify-content-center">
+        <strong class="brand-text">Bootstrap Training Site!</strong>
       </div>
 
       <!-- Oikea: Hampurilaisnappi -->
-      <div class="col-4 d-flex justify-content-end">
+      <div class="col-2 d-flex justify-content-end">
         <button class="navbar-toggler" type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#navigaatio"
@@ -94,10 +94,12 @@
     </div>
   </nav>
 
-  <!-- ======= SISÄLTÖ ======= -->
+  <!-- ======= SISÄLTÖ ======= 
+   -tekemällä containerit divin sisään sain tehtyä marginaalit mx-2, jotka tulivat kaikille puolille.
+  -->
   <main id="main">
 <div class="mx-2">
-    <section class="container bg-dark text-white p-3 rounded-5 mt-2" aria-labelledby="etusivu-tervetuloa">
+    <section class="container bg-dark text-white p-3 rounded-5 mt-3" aria-labelledby="etusivu-tervetuloa">
       <h1 id="etusivu-tervetuloa" class="text-center">Tervetuloa sivulleni!</h1>
       <p class="text-center">
         Tämä on Bootstrapin avulla tehty sivu. Tarkoituksena on harjoitella Bootstrapin käyttöä.
@@ -108,22 +110,22 @@
     <section class="container bg-dark text-white p-3 rounded-5 mt-5" aria-labelledby="etusivu-sisalto">
       <h2 id="etusivu-sisalto" class="text-center">Mitä sivustolta löytyy?</h2>
       <p class="text-center">Täältä löytyy Bootstrapin ominaisuuksia eroteltuna omiksi sivuiksi.</p>
-      <p class="text-center">Voit navigoida tutkimaan eri ominaisuuksia navigaatiopalkista!</p>
+      <p class="text-center">Voit navigoida tutkimaan eri ominaisuuksia hampurilaisvalikosta tai sivun alaosasta.</p>
     </section>
 </div>
   </main>
 
   <!-- ======= FOOTER ======= -->
+
   <footer class="bg-transparent text-light mt-5" aria-label="Sivun alatunniste">
     <div class="container py-3">
 
-      <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
-        <a class="d-flex align-items-center text-decoration-none text-light" href="#">
-          <img src="Kuvat/Logo.png" alt="Sivuston logo" height="48" class="me-2">
-          <span>Bootstrap Training Site</span>
+<div class="d-flex align-items-center justify-content-center flex-wrap gap-4 text-center w-100">
+        <a class="d-flex align-items-center" href="#">
+          <img src="Kuvat/Logo.png" alt="Sivuston logo" height="100" class="me-2">
         </a>
 
-        <ul class="nav">
+        <ul class="nav justify-content-center w-100">
           <li class="nav-item"><a class="nav-link px-2 text-light" href="#">Etusivu</a></li>
           <li class="nav-item"><a class="nav-link px-2 text-light" href="https://joonalindholm.github.io/Karuselli.html">Karuselli</a></li>
           <li class="nav-item"><a class="nav-link px-2 text-light" href="https://joonalindholm.github.io/Ruudukko.html">Ruudukko</a></li>
