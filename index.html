@@ -65,72 +65,50 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-transparent p-1 rounded mt-1"
      aria-label="Päävalikko">
 
-  <!-- .container hoitaa navbarin leveyden ja sisäisen flexin -->
   <div class="container">
 
-    <!-- Brändi: logo + teksti -->
-    <!-- .navbar-brand on aina vasemmalla -->
-    <a class="navbar-brand d-flex align-items-center gap-1" href="#" aria-label="Etusivu">
-      <img src="Kuvat/Logo.png"
-           alt="Sivuston logo"
-           class="brand-logo me-1">
-      <span class="brand-text text-break">Bootstrap Training Site</span>
-    </a>
+    <!-- GRID-RIVI -->
+    <div class="row align-items-center w-100">
 
-    <!-- Hampurilaisnappi -->
-    <!-- data-bs-toggle="collapse" = avaa/sulkee -->
-    <!-- data-bs-target viittaa alla olevaan #navigaatio-diviin -->
-    <button class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navigaatio"
-            aria-controls="navigaatio"
-            aria-expanded="false"
-            aria-label="Valikon vaihto">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <!-- VASEN: logo + teksti -->
+      <div class="col-10 col-lg-auto">
+        <a class="navbar-brand d-flex align-items-center gap-1"
+           href="#"
+           aria-label="Etusivu">
+          <img src="Kuvat/Logo.png"
+               alt="Sivuston logo"
+               class="brand-logo me-1">
+          <span class="brand-text text-break">Bootstrap Training Site</span>
+        </a>
+      </div>
 
-    <!-- Navigaation linkit -->
-    <!-- .collapse = piilossa mobiilissa -->
-    <!-- .navbar-collapse = Bootstrapin navbar-logiikka -->
-    <!-- .ms-auto = työntää linkit oikealle leveillä näytöillä -->
-    <div class="collapse navbar-collapse ms-auto" id="navigaatio">
-      <ul class="navbar-nav mb-2 mb-lg-0">
+      <!-- OIKEA: hampurilaisnappi -->
+      <div class="col-2 col-lg-auto text-end">
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navigaatio"
+                aria-controls="navigaatio"
+                aria-expanded="false"
+                aria-label="Valikon vaihto">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
 
-        <!-- Aktiivinen sivu -->
+    </div>
+
+    <!-- COLLAPSE: täysi leveys, ei vaikuta napin sijaintiin -->
+    <div class="collapse navbar-collapse mt-2" id="navigaatio">
+      <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0">
+
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Etusivu</a>
         </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="https://joonalindholm.github.io/Karuselli.html">
-            Karuselli
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="https://joonalindholm.github.io/Ruudukko.html">
-            Ruudukko
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="https://joonalindholm.github.io/Kortit.html">
-            Kortit
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="https://joonalindholm.github.io/Haitari.html">
-            Haitari
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="https://joonalindholm.github.io/Taulukko.html">
-            Taulukko
-          </a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="https://joonalindholm.github.io/Karuselli.html">Karuselli</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://joonalindholm.github.io/Ruudukko.html">Ruudukko</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://joonalindholm.github.io/Kortit.html">Kortit</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://joonalindholm.github.io/Haitari.html">Haitari</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://joonalindholm.github.io/Taulukko.html">Taulukko</a></li>
 
       </ul>
     </div>
