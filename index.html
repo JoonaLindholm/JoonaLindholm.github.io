@@ -36,39 +36,49 @@
        - .navbar-expand-lg: mobiilissa kollapsoituu, lg:stä ylöspäin auki
        - .bg-transparent: läpinäkyvä tausta (näyttää teeman värit alta)
   -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent p-1 rounded mt-1" aria-label="Päävalikko">
-    <div class="container d-flex align-items-center">
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="Kuvat/Logo.png" alt="" height="32" class="me-2">
+      Bootstrap Training Site
+    </a>
 
-      <!-- Brändi: logo (saa kutistua) + teksti (saa rivittyä) -->
-      <a class="navbar-brand d-flex align-items-center gap-1 flex-shrink-0" href="#" aria-label="Etusivu">
-        <!-- Vaihdettu class brand-logo ja poistettu kiinteä height: hallitaan CSS:llä -->
-        <img src="Kuvat/Logo.png" alt="Sivuston logo" class="brand-logo me-1 flex-shrink-0">
-        <span class="brand-text text-break" style="min-width:0;">Bootstrap Training Site</span>
-      </a>
-
-      <!-- Hamburger oikealle .ms-auto:lla -->
-      <button class="navbar-toggler ms-auto" type="button"
-              data-bs-toggle="collapse" data-bs-target="#navigaatio"
-              aria-controls="navigaatio" aria-expanded="false"
-              aria-label="Valikon vaihto">
+    <!-- KÄÄRE: jotta voimme ankkuroida valikon napin alle -->
+    <div class="position-relative">
+      <!-- Hampurilaisnappi -->
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false" aria-label="Valikon vaihto">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Linkit: oikealle leveillä näytöillä (justify-content-end) -->
-      <div class="collapse navbar-collapse justify-content-end" id="navigaatio">
-        <ul class="navbar-nav mb-2 mb-lg-0">
-          <!-- HUOM: pidä hrefit oikeisiin sivuihin/ankkureihin -->
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Etusivu</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://joonalindholm.github.io/Karuselli.html">Karuselli</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://joonalindholm.github.io/Ruudukko.html">Ruudukko</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://joonalindholm.github.io/Kortit.html">Kortit</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://joonalindholm.github.io/Haitari.html">Haitari</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://joonalindholm.github.io/Taulukko.html">Taulukko</a></li>
+      <!-- Itse valikko: näkyy vain <lg, ja putoaa napin alle -->
+      <div id="navMenu"
+           class="collapse navbar-collapse d-lg-none position-absolute top-100 end-0 mt-2">
+        <ul class="navbar-nav bg-dark rounded shadow border border-secondary-subtle p-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Etusivu</a></li>
+          <li class="nav-item"><a class="nav-link" href="Karuselli.html">Karuselli</a></li>
+          <li class="nav-item"><a class="nav-link" href="Ruudukko.html">Ruudukko</a></li>
+          <li class="nav-item"><a class="nav-link" href="Kortit.html">Kortit</a></li>
+          <li class="nav-item"><a class="nav-link" href="Haitari.html">Haitari</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="Taulukko.html">Taulukko</a></li>
         </ul>
       </div>
-
     </div>
-  </nav>
+
+    <!-- Desktop-linkit: näkyvät vain >= lg -->
+    <div class="d-none d-lg-flex">
+      <ul class="navbar-nav ms-3">
+        <li class="nav-item"><a class="nav-link" href="index.html">Etusivu</a></li>
+        <li class="nav-item"><a class="nav-link" href="Karuselli.html">Karuselli</a></li>
+        <li class="nav-item"><a class="nav-link" href="Ruudukko.html">Ruudukko</a></li>
+        <li class="nav-item"><a class="nav-link" href="Kortit.html">Kortit</a></li>
+        <li class="nav-item"><a class="nav-link" href="Haitari.html">Haitari</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="Taulukko.html">Taulukko</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
   <!-- Etusivun sisältö
        - Tervetuloa container, jossa selitetty sivuston tarkoitusta ja toinen container, jossa tarkennetaan vielä.
