@@ -21,6 +21,31 @@
 
     /* Logo saa kutistua ruudun mukaan (säilyttää suhteen) */
     .navbar .brand-logo { height: clamp(36px, 8vw, 84px); width: auto; object-fit: contain; }
+
+/* ===== NAVBAR FIX FOLD / PIENET NÄYTÖT ===== */
+
+/* Estetään navbarin sisällön rivittyminen */
+.navbar > .container {
+  flex-wrap: nowrap;
+}
+
+/* Pakotetaan hampurilaisnappi oikeaan reunaan */
+.navbar-toggler {
+  margin-left: auto;
+}
+
+/* Pienennetään logoa todella kapeilla näytöillä (esim. Fold) */
+@media (max-width: 400px) {
+  .navbar .brand-logo {
+    height: 36px;
+  }
+
+  .navbar .brand-text {
+    font-size: 0.9rem;
+    line-height: 1.1;
+  }
+}
+    
   </style>
 </head>
 
