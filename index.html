@@ -20,13 +20,14 @@
     .brand-text { line-height: 1.1; }
 
     /* Logo skaalautuu näytön mukaan */
-    /*.brand-logo {
+    .brand-logo {
     height: clamp(44px, 6vw, 84px);
     width: auto;
     object-fit: contain;
     }
 
-    /* Erittäin kapeat näytöt. En saanut sivua skaalautumaan omaan puhelimeeni ilman tätä */
+    /* Erittäin kapeat näytöt. En saanut aluksi sivua skaalautumaan omaan puhelimeeni ilman tätä, mutta
+    lopulta sainkin niin jätin tämän kommentteihin*/
     /*@media (max-width: 400px) {
       .brand-logo { height: 36px; }
       .brand-text { font-size: .9rem; }
@@ -41,6 +42,7 @@
       - Grid-rakenne estää hampurilaisnapin tippumisen logon alle. Hampurilaisvalikko ei suostunut pysymään paikallaan ilman gridiä.
       - Toimii kapeilla näytöillä. Gridillä myös oma sivu, mutta toimi jo tässä.
       - Navbari läpinäkyväksi
+      - Laitoin logon kommentteihin toistaiseksi, kun se ei asettunut nätisti
   -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-transparent p-4"
        aria-label="Päävalikko">
@@ -49,19 +51,19 @@
       <!-- YLÄRIVI: logo + hampurilaisnappi keskitettynä -->
       <div class="row align-items-center w-100">
         
- <!-- Vasen: Logo 
-      <div class="col-auto d-flex align-items-center">
+ <!-- Logon säädöt -->
+      <div class="col-2 d-flex align-items-center">
         <a class="navbar-brand d-flex align-items-center gap-1" href="#" aria-label="Etusivu">
           <img src="Kuvat/Logo.png" alt="Sivuston logo" height="48" class="me-2">
         </a>
       </div>
--->
-      <!-- Keskellä: Teksti -->
-      <div class="col-10 d-flex justify-content-center">
+
+      <!-- Teksti otsikko, laitoin strong, että teksti on kuin boldattuna -->
+      <div class="col-8 d-flex justify-content-center">
         <strong class="brand-text">Bootstrap Training Site!</strong>
       </div>
 
-      <!-- Oikea: Hampurilaisnappi -->
+      <!-- Hampurilaisnappi ja sen ominaisuuksia -->
       <div class="col-2 d-flex justify-content-end">
         <button class="navbar-toggler" type="button"
                 data-bs-toggle="collapse"
@@ -75,10 +77,10 @@
 
       </div>
 
-      <!-- COLLAPSE-VALIKKO -->
+      <!-- "collapse" valikko joka aukeaa, kun hampurilaisvalikkoa painaa. Mukana muotoilua, että linkit ovat siististi-->
       <div class="collapse navbar-collapse mt-2" id="navigaatio">
         <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0">
-
+ <!-- tässä osiossa itse linkit -->
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Etusivu</a>
           </li>
@@ -87,10 +89,8 @@
           <li class="nav-item"><a class="nav-link" href="https://joonalindholm.github.io/Kortit.html">Kortit</a></li>
           <li class="nav-item"><a class="nav-link" href="https://joonalindholm.github.io/Haitari.html">Haitari</a></li>
           <li class="nav-item"><a class="nav-link" href="https://joonalindholm.github.io/Taulukko.html">Taulukko</a></li>
-
         </ul>
       </div>
-
     </div>
   </nav>
 
