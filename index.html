@@ -19,7 +19,7 @@
     .navbar .navbar-brand { white-space: normal; }
     .brand-text { line-height: 1.1; }
 
-    /* Logo skaalautuu näytön mukaan */
+    /* Logo skaalautuu näytön mukaan. Otin logon pois navista, koska se aiheutti ongelmia
     .brand-logo {
     height: clamp(44px, 6vw, 84px);
     width: auto;
@@ -51,20 +51,20 @@
       <!-- YLÄRIVI: logo + hampurilaisnappi keskitettynä -->
       <div class="row align-items-center w-100">
         
- <!-- Logon säädöt -->
+ <!-- Logon säädöt 
       <div class="col-1 d-flex align-items-center">
         <a class="navbar-brand d-flex align-items-center gap-1" href="#" aria-label="Etusivu">
           <img src="Kuvat/Logo.png" alt="Sivuston logo" height="48" class="me-2">
         </a>
       </div>
-
+-->
       <!-- Teksti otsikko, laitoin strong, että teksti on kuin boldattuna -->
-      <div class="col-9 d-flex justify-content-center">
+      <div class="col-8 d-flex justify-content-center">
         <strong class="brand-text">Bootstrap Training Site!</strong>
       </div>
 
       <!-- Hampurilaisnappi ja sen ominaisuuksia -->
-      <div class="col-1 d-flex justify-content-end">
+      <div class="col-4 d-flex justify-content-end">
         <button class="navbar-toggler" type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#navigaatio"
@@ -115,7 +115,7 @@
 </div>
   </main>
 
-  <!-- Footer ja sen säädöt ja linkit. Linkit ja sisältö keskitettynä  -->
+  <!-- Footer ja sen säädöt ja linkit. Linkit ja sisältö keskitettynä. Siirsin logon footeriin, koska se toimi paremmin-->
 
   <footer class="bg-transparent text-light mt-5" aria-label="Sivun alatunniste">
     <div class="container py-3">
