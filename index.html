@@ -44,13 +44,6 @@
       - Navbari läpinäkyväksi
       - Laitoin logon kommentteihin toistaiseksi, kun se ei asettunut nätisti
   -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent p-4"
-       aria-label="Päävalikko">
-
-    <div class="container">
-      <!-- YLÄRIVI: logo + hampurilaisnappi keskitettynä -->
-      <div class="row align-items-center w-100">
-        
  <!-- Logon säädöt 
       <div class="col-1 d-flex align-items-center">
         <a class="navbar-brand d-flex align-items-center gap-1" href="#" aria-label="Etusivu">
@@ -58,13 +51,22 @@
         </a>
       </div>
 -->
+
+  <nav class="navbar container p-3 mt-3 navbar-dark bg-transparent"
+       aria-label="Päävalikko"> 
+
+
+      <div class="d-flex align-items-start">
+          <img src="Kuvat/Logo.png" alt="Sivuston logo" height="68">
+      </div>
+
       <!-- Teksti otsikko, laitoin strong, että teksti on kuin boldattuna -->
-      <div class="col-8 d-flex justify-content-center">
+      <div class="d-flex justify-content-center">
         <strong class="brand-text">Bootstrap Training Site!</strong>
       </div>
 
       <!-- Hampurilaisnappi ja sen ominaisuuksia -->
-      <div class="col-4 d-flex justify-content-end">
+      <div class="d-flex justify-content-end">
         <button class="navbar-toggler" type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#navigaatio"
@@ -77,9 +79,9 @@
 
       </div>
 
-      <!-- "collapse" valikko joka aukeaa, kun hampurilaisvalikkoa painaa. Mukana muotoilua, että linkit ovat siististi-->
+      <!-- "collapse" valikko joka aukeaa, kun hampurilaisvalikkoa painaa. Mukana muotoilua, että linkit ovat siististi ja tulevat napin alapuolelle-->
       <div class="collapse navbar-collapse mt-2" id="navigaatio">
-        <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-end">
  <!-- tässä osiossa itse linkit -->
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Etusivu</a>
