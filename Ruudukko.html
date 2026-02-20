@@ -19,18 +19,11 @@
     .navbar .navbar-brand { white-space: normal; }
     .brand-text { line-height: 1.1; }
 
-    /* Logo skaalautuu näytön mukaan. Otin logon pois navista, koska se aiheutti ongelmia
-    .brand-logo {
-    height: clamp(44px, 6vw, 84px);
-    width: auto;
-    object-fit: contain;
-    }
-
     /* Erittäin kapeat näytöt. En saanut aluksi sivua skaalautumaan omaan puhelimeeni ilman tätä, mutta
     lopulta sainkin niin jätin tämän kommentteihin*/
     /*@media (max-width: 400px) {
-      .brand-logo { height: 36px; }
-      .brand-text { font-size: .9rem; }
+      brand-logo { height: 36px; }
+      brand-text { font-size: .9rem; }
     } */
 
   </style>
@@ -39,18 +32,11 @@
 <!-- sivulle harmaa tausta ja tekstit valkoisena -->
 <body class="bg-secondary text-white">
 
-  <!-- ======= NAVIGAATIO =======
-      - Hampurilaisvalikko ei suostunut pysymään paikallaan ilman gridiä.
+  <!-- NAVIGAATIO 
       - Toimii kapeilla näytöillä.
       - Navbari läpinäkyväksi
   -->
- <!-- Logon säädöt 
-      <div class="col-1 d-flex align-items-center">
-        <a class="navbar-brand d-flex align-items-center gap-1" href="#" aria-label="Etusivu">
-          <img src="Kuvat/Logo.png" alt="Sivuston logo" height="48" class="me-2">
-        </a>
-      </div>
--->
+
 
   <nav class="navbar container navbar-dark bg-transparent"
        aria-label="Päävalikko"> 
@@ -79,7 +65,7 @@
       <!-- "collapse" valikko joka aukeaa, kun hampurilaisvalikkoa painaa. Mukana muotoilua, että linkit ovat siististi ja tulevat napin alapuolelle-->
       <div class="collapse navbar-collapse me-2" id="navigaatio">
         <ul class="navbar-nav w-100 text-end">
- <!-- tässä osiossa itse linkit -->
+      <!-- tässä osiossa itse linkit -->
         <li class="nav-item"><a class="nav-link" href="index.html">Etusivu</a></li>
         <li class="nav-item"><a class="nav-link" href="Karuselli.html">Karuselli</a></li>
         <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Ruudukko</a></li>
@@ -91,7 +77,7 @@
     </div>
   </nav>
 
-  <!-- Otsikko -->
+  <!-- Otsikko ja sivun muut tekstit keskitettynä containerissa -->
   <main>
     <div class="container bg-dark text-white p-3 rounded my-1">
       <h1 class="text-center">Tällä sivulla on ruudukko!</h1>
@@ -99,6 +85,15 @@
       <p class="text-center">Tekoäly loi samoista kuvista kaksi eri versiota. Yö ja päivä.</p>
     </div>
   </main>
+
+<!--Tästä alkaa gridi osuus.
+-col-12 tarkoittaa, että pienillä näytöillä kuva vie koko cridin eli ruudukon. Maksimi arvo on siis 12.
+-col-md-6 tarkoittaa, että isommilla näytöillä (esim. tabletit ja tietokonenäytöt)
+ kuva vie puolet näytön leveydestä eli silloin kaksi kuvaa mahtuu vierekkäin, jos molemmat ovat col-md-6
+-molemmat ruudukot (ruuduko 1 ja 2) ovat omissa containereissa ja se jakaa ne omikseen
+-g-4 tarkoittaa, että col ruudukoiden välille tulee tilaa, muuten kuvat olisivat toisissaan kiinni
+-img-fluid säilyttää kuvan responsiivisena kun näytön koko vaihtuu. Kuvan kuvasuhde pysyy eikä se veny yms.
+-->
 
   <!-- Ruudukko 1 -->
   <div id="ruudukko" class="container mt-4">
@@ -130,8 +125,8 @@
       </div>
     </div>
   </div>
-  
-  <!-- Footer ja sen säädöt ja linkit. Linkit ja sisältö keskitettynä. Siirsin logon footeriin, koska se toimi paremmin-->
+
+  <!-- Footer ja sen säädöt ja linkit. Linkit ja sisältö keskitettynä. -->
 
   <footer class="bg-transparent text-light mt-3" aria-label="Sivun alatunniste">
     <div class="container py-3">
@@ -152,7 +147,7 @@
       </div>
 
       <hr class="opacity-50 my-3">
-
+<!--Loppuun vielä kommentti tekoälyn luomasta sisällöstä. Yläpuolen hr luo siistin viivan ennen alapuolen tekstiä.-->
       <div class="d-flex justify-content-center">
         <small class="opacity-75">
           <em>Sivuston kuvat ja osa teksteistä on luotu tekoälyllä.</em>
