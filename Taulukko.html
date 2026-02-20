@@ -19,7 +19,6 @@
     .navbar .navbar-brand { white-space: normal; }
     .brand-text { line-height: 1.1; }
 
-
     /* Erittäin kapeat näytöt. En saanut aluksi sivua skaalautumaan omaan puhelimeeni ilman tätä, mutta
     lopulta sainkin niin jätin tämän kommentteihin*/
     /*@media (max-width: 400px) {
@@ -33,7 +32,7 @@
 <!-- sivulle harmaa tausta ja tekstit valkoisena -->
 <body class="bg-secondary text-white">
 
-  <!-- NAVIGAATIO 
+  <!-- NAVIGAATIO
       - Toimii kapeilla näytöillä.
       - Navbari läpinäkyväksi
   -->
@@ -61,105 +60,141 @@
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
-
       </div>
-
       <!-- "collapse" valikko joka aukeaa, kun hampurilaisvalikkoa painaa. Mukana muotoilua, että linkit ovat siististi ja tulevat napin alapuolelle-->
       <div class="collapse navbar-collapse me-2" id="navigaatio">
         <ul class="navbar-nav w-100 text-end">
- <!-- tässä osiossa itse linkit -->
-          <li class="nav-item"><a class="nav-link" href="index.html">Etusivu</a></li>
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Karuselli</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://joonalindholm.github.io/Ruudukko.html">Ruudukko</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://joonalindholm.github.io/Kortit.html">Kortit</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://joonalindholm.github.io/Haitari.html">Haitari</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://joonalindholm.github.io/Taulukko.html">Taulukko</a></li>
+ <!-- tässä osiossa itse linkit, nav link active kertoo mikä on aktiivinen sivu eli auki. Näkyy kirkkaana -->
+        <li class="nav-item"><a class="nav-link" href="Etusivu.html">Etusivu</a></li>
+        <li class="nav-item"><a class="nav-link" href="Karuselli.html">Karuselli</a></li>
+        <li class="nav-item"><a class="nav-link" href="Ruudukko.html">Ruudukko</a></li>
+        <li class="nav-item"><a class="nav-link" href="Kortit.html">Kortit</a></li>
+        <li class="nav-item"><a class="nav-link" href="Haitari.html">Haitari</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="Taulukko.html" href="#">Taulukko</a></li>
         </ul>
       </div>
     </div>
   </nav>
-<!--tässä on pyöristetty container laatikko, jossa tekstiä-->
-<main>
-    <div class="container bg-dark text-white p-3 rounded my-1">
-        <h1 class="text-center">Tervetuloa katsomaan kuvakarusellia!</h1>
-    </div>
-</main>
 
-<!--Tästä alkaa itse kuvakaruselli osio-->
-<div id="imageCarousel" class="carousel slide my-5" data-bs-ride="carousel">
 
-  <!-- Kuvien alareunan navigaatio indikaattori napit -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="2"></button>
-    <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="3"></button>
+  <!-- Tästä alkaa taulukko osuus 
+    - <section> tekee oman lohkon taulukolle
+    - table-responsive tekee taulukosta sellaisen että sitä voi lukea vaakatasossa pienillä näytöillä
+    - <table> = taulukkoelementti
+    - table = Bootstrapin perustaulukon tyyli
+    - table-striped = Vuorottelevat rivivärit
+    - table-hover = Rivi korostuu hiiren ollessa päällä
+    - align-middle = Sisältö pystysuunnassa keskitetty
+    - <thead> = Taulukon otsikko-osa
+    - table-dark = Tumma taustaväri taulukkoon
+    - <tbody> = Taulukon sisältöosuus
+    - <tr> = Table row (yksi rivi)
+    - <th> = Otsikkosolu (header cell)
+    - <td> = Tavallinen tietosolu (data cell)
+    - code = tekee tekstin koodilaatikon sisään
+-->
+
+<section id="komponentit" class="container py-5">
+  <h2 class="text-center mb-4">Bootstrap pikamuistitaulukko</h2>
+
+  <div class="table-responsive">
+    <table class="table table-dark table-striped table-hover align-middle">
+      <thead class="table-secondary">
+        <tr>
+          <th>Ominaisuus</th>
+          <th>Lyhenteet</th>
+          <th>Esimerkkejä</th>
+          <th>Mitä tekee</th>
+        </tr>
+      </thead>
+      <tbody class>
+
+<tr>
+  <td>Välejä</td>
+  <td><strong><code class="text-white bg-secondary">m, p, t, b, x, y</code></strong></td>
+  <td><strong><code class="text-white bg-secondary">mt-3, p-4, mx-auto</code></strong></td>
+  <td>Lisää marginaalia tai paddingia eri suuntiin</td>
+</tr>
+
+<tr>
+  <td>Taustavärit</td>
+  <td><strong><code class="text-white bg-secondary">bg-*</code></strong></td>
+  <td><strong><code class="text-white bg-secondary">bg-primary, bg-success, bg-dark</code></strong></td>
+  <td>Muuttaa elementin taustavärin</td>
+</tr>
+
+<tr>
+  <td>Tekstivärit</td>
+  <td><strong><code class="text-white bg-secondary">text-*</code></strong></td>
+  <td><strong><code class="text-white bg-secondary">text-white, text-danger</code></strong></td>
+  <td>Muuttaa tekstin värin</td>
+</tr>
+
+<tr>
+  <td>Reunat</td>
+  <td><strong><code class="text-white bg-secondary">border, border-*</code></strong></td>
+  <td><strong><code class="text-white bg-secondary">border-2, border-primary</code></strong></td>
+  <td>Lisää ja värittää reunat</td>
+</tr>
+
+<tr>
+  <td>Pyöristys</td>
+  <td><strong><code class="text-white bg-secondary">rounded</code></strong></td>
+  <td><strong><code class="text-white bg-secondary">rounded, rounded-circle</code></strong></td>
+  <td>Pyöristää kulmat tai tekee ympyrän</td>
+</tr>
+
+<tr>
+  <td>Näyttö & sijoittelu</td>
+  <td><strong><code class="text-white bg-secondary">d-*, justify-*, align-*</code></strong></td>
+  <td><strong><code class="text-white bg-secondary">d-flex, justify-content-center</code></strong></td>
+  <td>Hallinnoi näkyvyyttä ja asettelua</td>
+</tr>
+
+<tr>
+  <td>Varjot</td>
+  <td><strong><code class="text-white bg-secondary">shadow*</code></strong></td>
+  <td><strong><code class="text-white bg-secondary">shadow-sm, shadow-lg</code></strong></td>
+  <td>Lisää syvyysvaikutelman</td>
+</tr>
+
+
+      </tbody>
+    </table>
   </div>
+</section>
 
-  <div class="carousel-inner">
+ <!-- Footer ja sen säädöt ja linkit. Linkit ja sisältö keskitettynä. -->
 
-<!--Kuvissa on pieni pyöristys, mutta en saanut liikkeeseen pyöristystä niin jätin sen pieneksi
-w-100 varmistaa, että kuvat täyttävät karusellin leveyden (100%), 
-ja d-block (display block) poistaa inline-kuville tyypillisen alareunan välin, jota en huomannut mutta jätin varmuuden vuoksi tämän päälle.-->
+<footer class="bg-transparent text-light mt-3" aria-label="Sivun alatunniste">
+  <div class="container py-3">
 
-    <div class="carousel-item active">
-      <img src="Kuvat/Saari.png" class="d-block w-100 rounded" alt="Kuva 1">
+    <div class="d-flex align-items-center justify-content-center flex-wrap gap-4 text-center">
+      <a href="#">
+        <img src="Kuvat/Logo.png" alt="Sivuston logo" height="100">
+      </a>
+
+      <ul class="nav justify-content-center">
+        <li class="nav-item"><a class="nav-link px-2 text-light" href="#">Etusivu</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-light" href="Karuselli.html">Karuselli</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-light" href="Ruudukko.html">Ruudukko</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-light" href="Kortit.html">Kortit</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-light" href="Haitari.html">Haitari</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-light" href="Taulukko.html">Taulukko</a></li>
+      </ul>
     </div>
 
-    <div class="carousel-item">
-      <img src="Kuvat/Kalat.png" class="d-block w-100 rounded" alt="Kuva 2">
-    </div>
-
-    <div class="carousel-item">
-      <img src="Kuvat/Kalatsaari.png" class="d-block w-100 rounded" alt="Kuva 3">
-    </div>
-
-    <div class="carousel-item">
-      <img src="Kuvat/Simpukat.png" class="d-block w-100 rounded" alt="Kuva 4">
+    <hr class="opacity-50 my-3">
+<!--Loppuun vielä kommentti tekoälyn luomasta sisällöstä. Yläpuolen hr luo siistin viivan ennen alapuolen tekstiä.-->
+    <div class="text-center">
+      <small class="opacity-75">
+        <em>Sivuston kuvat ja osa teksteistä on luotu tekoälyllä.</em>
+      </small>
     </div>
 
   </div>
+</footer>
 
-  <!-- Reunanuolet, joista voi myös vaihdella kuvia -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-
-  <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-
-</div>
-
-  <!-- Footer ja sen säädöt ja linkit. Linkit ja sisältö keskitettynä. -->
-
-  <footer class="bg-transparent text-light mt-3" aria-label="Sivun alatunniste">
-    <div class="container py-3">
-
-<div class="d-flex align-items-center justify-content-center flex-wrap gap-4 text-center w-100">
-        <a class="d-flex align-items-center" href="#">
-          <img src="Kuvat/Logo.png" alt="Sivuston logo" height="100" class="me-2">
-        </a>
-
-        <ul class="nav justify-content-center w-100">
-          <li class="nav-item"><a class="nav-link px-2 text-light" href="#">Etusivu</a></li>
-          <li class="nav-item"><a class="nav-link px-2 text-light" href="https://joonalindholm.github.io/Karuselli.html">Karuselli</a></li>
-          <li class="nav-item"><a class="nav-link px-2 text-light" href="https://joonalindholm.github.io/Ruudukko.html">Ruudukko</a></li>
-          <li class="nav-item"><a class="nav-link px-2 text-light" href="https://joonalindholm.github.io/Kortit.html">Kortit</a></li>
-          <li class="nav-item"><a class="nav-link px-2 text-light" href="https://joonalindholm.github.io/Haitari.html">Haitari</a></li>
-          <li class="nav-item"><a class="nav-link px-2 text-light" href="https://joonalindholm.github.io/Taulukko.html">Taulukko</a></li>
-        </ul>
-      </div>
-
-      <hr class="opacity-50 my-3">
-<!--Loppuun vielä kommentti tekoälyn luomasta sisällöstä. Yläpuolen hr luo viivan ennen alapuolen tekstiä.-->
-      <div class="d-flex justify-content-center">
-        <small class="opacity-75">
-          <em>Sivuston kuvat ja osa teksteistä on luotu tekoälyllä.</em>
-        </small>
-      </div>
-    </div>
-  </footer>
 
 </body>
 </html>
