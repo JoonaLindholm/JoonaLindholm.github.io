@@ -19,18 +19,12 @@
     .navbar .navbar-brand { white-space: normal; }
     .brand-text { line-height: 1.1; }
 
-    /* Logo skaalautuu näytön mukaan. Otin logon pois navista, koska se aiheutti ongelmia
-    .brand-logo {
-    height: clamp(44px, 6vw, 84px);
-    width: auto;
-    object-fit: contain;
-    }
 
     /* Erittäin kapeat näytöt. En saanut aluksi sivua skaalautumaan omaan puhelimeeni ilman tätä, mutta
     lopulta sainkin niin jätin tämän kommentteihin*/
     /*@media (max-width: 400px) {
-      .brand-logo { height: 36px; }
-      .brand-text { font-size: .9rem; }
+      brand-logo { height: 36px; }
+      brand-text { font-size: .9rem; }
     } */
 
   </style>
@@ -39,18 +33,10 @@
 <!-- sivulle harmaa tausta ja tekstit valkoisena -->
 <body class="bg-secondary text-white">
 
-  <!-- ======= NAVIGAATIO =======
-      - Hampurilaisvalikko ei suostunut pysymään paikallaan ilman gridiä.
+  <!-- NAVIGAATIO 
       - Toimii kapeilla näytöillä.
       - Navbari läpinäkyväksi
   -->
- <!-- Logon säädöt 
-      <div class="col-1 d-flex align-items-center">
-        <a class="navbar-brand d-flex align-items-center gap-1" href="#" aria-label="Etusivu">
-          <img src="Kuvat/Logo.png" alt="Sivuston logo" height="48" class="me-2">
-        </a>
-      </div>
--->
 
   <nav class="navbar container navbar-dark bg-transparent"
        aria-label="Päävalikko"> 
@@ -145,7 +131,7 @@ ja d-block (display block) poistaa inline-kuville tyypillisen alareunan välin, 
 
 </div>
 
-  <!-- Footer ja sen säädöt ja linkit. Linkit ja sisältö keskitettynä. Siirsin logon footeriin, koska se toimi paremmin-->
+  <!-- Footer ja sen säädöt ja linkit. Linkit ja sisältö keskitettynä. -->
 
   <footer class="bg-transparent text-light mt-3" aria-label="Sivun alatunniste">
     <div class="container py-3">
@@ -166,7 +152,7 @@ ja d-block (display block) poistaa inline-kuville tyypillisen alareunan välin, 
       </div>
 
       <hr class="opacity-50 my-3">
-
+<!--Loppuun vielä kommentti tekoälyn luomasta sisällöstä. Yläpuolen hr luo viivan ennen alapuolen tekstiä.-->
       <div class="d-flex justify-content-center">
         <small class="opacity-75">
           <em>Sivuston kuvat ja osa teksteistä on luotu tekoälyllä.</em>
