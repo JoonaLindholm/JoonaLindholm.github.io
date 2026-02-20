@@ -19,18 +19,11 @@
     .navbar .navbar-brand { white-space: normal; }
     .brand-text { line-height: 1.1; }
 
-    /* Logo skaalautuu näytön mukaan. Otin logon pois navista, koska se aiheutti ongelmia
-    .brand-logo {
-    height: clamp(44px, 6vw, 84px);
-    width: auto;
-    object-fit: contain;
-    }
-
     /* Erittäin kapeat näytöt. En saanut aluksi sivua skaalautumaan omaan puhelimeeni ilman tätä, mutta
     lopulta sainkin niin jätin tämän kommentteihin*/
     /*@media (max-width: 400px) {
-      .brand-logo { height: 36px; }
-      .brand-text { font-size: .9rem; }
+      brand-logo { height: 36px; }
+      brand-text { font-size: .9rem; }
     } */
 
   </style>
@@ -38,17 +31,11 @@
 
 <body class="bg-secondary text-white">
 
-  <!-- ======= NAVIGAATIO ======= -->
-  <!-- Hampurilaisvalikko ei suostunut pysymään paikallaan ilman gridiä.
-       Toimii kapeilla näytöillä.
-       Navbari läpinäkyväksi -->
-  <!-- Logon säädöt 
-       <div class="col-1 d-flex align-items-center">
-         <a class="navbar-brand d-flex align-items-center gap-1" href="#" aria-label="Etusivu">
-           <img src="Kuvat/Logo.png" alt="Sivuston logo" height="48" class="me-2">
-         </a>
-       </div>
-  -->
+  <!-- NAVIGAATIO
+      - Toimii kapeilla näytöillä.
+      - Navbari läpinäkyväksi 
+       -->
+
 
   <nav class="navbar container navbar-dark bg-transparent" aria-label="Päävalikko"> 
 
@@ -86,24 +73,41 @@
         <li class="nav-item"><a class="nav-link" href="Taulukko.html">Taulukko</a></li>
       </ul>
     </div>
-
   </nav>
 
+<!--Esittely teksti omassa containerissa-->
 <main>
   <div class="container bg-dark text-white p-3 rounded my-1">
     <h1 class="text-center">Tällä sivulla on kortteja!</h1>
   </div>
 </main>
 
+<!--Toinen esittely teksti myös omassa containerissa-->
 <div class="container my-5">
   <h2 class="mb-4 text-center">Luonnon vuodenajat</h2>
 
-  <!-- Responsiivinen grid: 1 / 2 / 4 korttia -->
+  <!-- Responsiivinen grid: 1 / 2 / 4 korttia vierekkäin vaakatasossa
+   -pienellä näytöllä yksi kortti
+   -keskikokoisella näytöllä kaksi korttia
+   -isolla näytöllä neljä korttia
+   -g-4 luo väliä korttien välille
+  -->
   <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-4">
+
+  <!-- Korttien määrittelyä
+    -card on Bootstrapin valmis korttityyli
+    -h-100 tarkoittaa, että korkeus on 100% sarakkeesta eli kaikki saman rivin kortit ovat yhtä korkeita
+    -shadow-sm tekee pienen varjon (pehmeä syvyysvaikutelma)
+    -border-5 tekee paksun reunaviivan kortille ja border-white muuttaa reunan valkoiseksi
+    -overflow-hidden → estää sisällön "vuotamisen" reunojen yli (hyödyllinen esim. pyöristetyissä kuvissa)
+    -card-body antaa sisäiset marginaalit (paddingit)
+    -d-flex tekee elementistä flexboxin
+    -flex-column asettaa sisällön pystysuuntaan eli kuvan ja tekstit
+  -->
 
     <!-- Card 1 – Kesä -->
     <div class="col">
-      <div class="card h-100 shadow-sm border-0 overflow-hidden">
+      <div class="card bg-transparent text-white h-100 shadow-sm border-5 border-white overflow-hidden">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title text-center">Kesä</h5>
           <img src="Kuvat/Kesäjoki.png" class="img-fluid rounded mb-3" alt="Kesämaisema">
@@ -116,7 +120,7 @@
 
     <!-- Card 2 – Syksy -->
     <div class="col">
-      <div class="card h-100 shadow-sm border-0 overflow-hidden">
+      <div class="card bg-transparent text-white h-100 shadow-sm border-5 border-white overflow-hidden">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title text-center">Syksy</h5>
           <img src="Kuvat/Syksyjoki.png" class="img-fluid rounded mb-3" alt="Syksymaisema">
@@ -129,7 +133,7 @@
 
     <!-- Card 3 – Talvi -->
     <div class="col">
-      <div class="card h-100 shadow-sm border-0 overflow-hidden">
+      <div class="card bg-transparent text-white h-100 shadow-sm border-5 border-white overflow-hidden">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title text-center">Talvi</h5>
           <img src="Kuvat/Talvijoki.png" class="img-fluid rounded mb-3" alt="Talvimaisema">
@@ -142,9 +146,9 @@
 
     <!-- Card 4 – Varhaiskevät -->
     <div class="col">
-      <div class="card h-100 shadow-sm border-0 overflow-hidden">
+      <div class="card bg-transparent text-white h-100 shadow-sm border-5 border-white overflow-hidden">
         <div class="card-body d-flex flex-column">
-          <h5 class="card-title text-center">Varhaiskevät</h5>
+          <h5 class="card-title text-center">Kevät</h5>
           <img src="Kuvat/Kevätjoki.png" class="img-fluid rounded mb-3" alt="Kevätmaisema">
           <p class="card-text text-center">
             Talven ruskea maasto alkaa vihertää, ja hennot kevään lehdet tuovat maisemaan uuden alun.
@@ -156,7 +160,7 @@
   </div>
 </div>
 
-<!-- Footer ja sen säädöt ja linkit. Linkit ja sisältö keskitettynä. Siirsin logon footeriin, koska se toimi paremmin-->
+<!-- Footer ja sen säädöt ja linkit. Linkit ja sisältö keskitettynä. -->
 <footer class="bg-transparent text-light mt-3" aria-label="Sivun alatunniste">
   <div class="container py-3">
 
@@ -176,7 +180,7 @@
     </div>
 
     <hr class="opacity-50 my-3">
-
+<!--Loppuun vielä kommentti tekoälyn luomasta sisällöstä. Yläpuolen hr luo siistin viivan ennen alapuolen tekstiä.-->
     <div class="d-flex justify-content-center">
       <small class="opacity-75">
         <em>Sivuston kuvat ja osa teksteistä on luotu tekoälyllä.</em>
