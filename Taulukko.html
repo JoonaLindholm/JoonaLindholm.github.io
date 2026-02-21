@@ -19,11 +19,18 @@
     .navbar .navbar-brand { white-space: normal; }
     .brand-text { line-height: 1.1; }
 
+    /* Logo skaalautuu näytön mukaan. Otin logon pois navista, koska se aiheutti ongelmia
+    .brand-logo {
+    height: clamp(44px, 6vw, 84px);
+    width: auto;
+    object-fit: contain;
+    }
+
     /* Erittäin kapeat näytöt. En saanut aluksi sivua skaalautumaan omaan puhelimeeni ilman tätä, mutta
     lopulta sainkin niin jätin tämän kommentteihin*/
     /*@media (max-width: 400px) {
-      brand-logo { height: 36px; }
-      brand-text { font-size: .9rem; }
+      .brand-logo { height: 36px; }
+      .brand-text { font-size: .9rem; }
     } */
 
   </style>
@@ -32,10 +39,19 @@
 <!-- sivulle harmaa tausta ja tekstit valkoisena -->
 <body class="bg-secondary text-white">
 
-  <!-- NAVIGAATIO
-      - Toimii kapeilla näytöillä.
+  <!-- ======= NAVIGAATIO =======
+      - Grid-rakenne estää hampurilaisnapin tippumisen logon alle. Hampurilaisvalikko ei suostunut pysymään paikallaan ilman gridiä.
+      - Toimii kapeilla näytöillä. Gridillä myös oma sivu, mutta toimi jo tässä.
       - Navbari läpinäkyväksi
+      - Laitoin logon kommentteihin toistaiseksi, kun se ei asettunut nätisti
   -->
+ <!-- Logon säädöt 
+      <div class="col-1 d-flex align-items-center">
+        <a class="navbar-brand d-flex align-items-center gap-1" href="#" aria-label="Etusivu">
+          <img src="Kuvat/Logo.png" alt="Sivuston logo" height="48" class="me-2">
+        </a>
+      </div>
+-->
 
   <nav class="navbar container navbar-dark bg-transparent"
        aria-label="Päävalikko"> 
@@ -44,11 +60,21 @@
           <img src="Kuvat/Logo.png" alt="Sivuston logo" height="68">
       </div>
 
-      <!-- Teksti otsikko, laitoin strong, että teksti on kuin boldattuna -->
-      <div class="d-flex justify-content-center">
-        <strong class="brand-text">Bootstrap Training Site!</strong>
-      </div>
+      <!-- Teksti otsikko, Tein omat versiot isolle ja pienelle näytölle-->
 
+<a class="navbar-brand fw-bold" href="#">
+
+  <!-- pienet näytöt -->
+  <span class="fs-6 d-inline d-lg-none">
+    Bootstrap Training Site!
+  </span>
+
+  <!-- Isot näytöt -->
+  <span class="fs-4 d-none d-lg-inline">
+    Bootstrap Training Site!
+  </span>
+
+</a>
       <!-- Hampurilaisnappi ja sen ominaisuuksia -->
       <div class="d-flex justify-content-end me-2">
         <button class="navbar-toggler" type="button"
@@ -74,6 +100,8 @@
         </ul>
       </div>
     </div>
+    <!--hr luo viivan navin jälkeen rajauksena. En saanut näkymään ensin, mutta sitten tajusin laittaa sen containeriksi-->
+    <hr class="container opacity-50 mx-2">
   </nav>
 
 
