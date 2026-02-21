@@ -19,11 +19,18 @@
     .navbar .navbar-brand { white-space: normal; }
     .brand-text { line-height: 1.1; }
 
+    /* Logo skaalautuu näytön mukaan. Otin logon pois navista, koska se aiheutti ongelmia
+    .brand-logo {
+    height: clamp(44px, 6vw, 84px);
+    width: auto;
+    object-fit: contain;
+    }
+
     /* Erittäin kapeat näytöt. En saanut aluksi sivua skaalautumaan omaan puhelimeeni ilman tätä, mutta
     lopulta sainkin niin jätin tämän kommentteihin*/
     /*@media (max-width: 400px) {
-      brand-logo { height: 36px; }
-      brand-text { font-size: .9rem; }
+      .brand-logo { height: 36px; }
+      .brand-text { font-size: .9rem; }
     } */
 
   </style>
@@ -32,10 +39,19 @@
 <!-- sivulle harmaa tausta ja tekstit valkoisena -->
 <body class="bg-secondary text-white">
 
-  <!-- NAVIGAATIO 
-      - Toimii kapeilla näytöillä
-      - Navbar läpinäkyvä
+  <!-- ======= NAVIGAATIO =======
+      - Grid-rakenne estää hampurilaisnapin tippumisen logon alle. Hampurilaisvalikko ei suostunut pysymään paikallaan ilman gridiä.
+      - Toimii kapeilla näytöillä. Gridillä myös oma sivu, mutta toimi jo tässä.
+      - Navbari läpinäkyväksi
+      - Laitoin logon kommentteihin toistaiseksi, kun se ei asettunut nätisti
   -->
+ <!-- Logon säädöt 
+      <div class="col-1 d-flex align-items-center">
+        <a class="navbar-brand d-flex align-items-center gap-1" href="#" aria-label="Etusivu">
+          <img src="Kuvat/Logo.png" alt="Sivuston logo" height="48" class="me-2">
+        </a>
+      </div>
+-->
 
   <nav class="navbar container navbar-dark bg-transparent"
        aria-label="Päävalikko"> 
@@ -44,11 +60,21 @@
           <img src="Kuvat/Logo.png" alt="Sivuston logo" height="68">
       </div>
 
-      <!-- Teksti otsikko, laitoin strong, että teksti on kuin boldattuna -->
-      <div class="d-flex justify-content-center">
-        <strong class="brand-text">Bootstrap Training Site!</strong>
-      </div>
+      <!-- Teksti otsikko, Tein omat versiot isolle ja pienelle näytölle-->
 
+<a class="navbar-brand fw-bold" href="#">
+
+  <!-- pienet näytöt -->
+  <span class="fs-6 d-inline d-lg-none">
+    Bootstrap Training Site!
+  </span>
+
+  <!-- Isot näytöt -->
+  <span class="fs-4 d-none d-lg-inline">
+    Bootstrap Training Site!
+  </span>
+
+</a>
       <!-- Hampurilaisnappi ja sen ominaisuuksia -->
       <div class="d-flex justify-content-end me-2">
         <button class="navbar-toggler" type="button"
@@ -67,7 +93,9 @@
       <div class="collapse navbar-collapse me-2" id="navigaatio">
         <ul class="navbar-nav w-100 text-end">
  <!-- tässä osiossa itse linkit -->
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Etusivu</a>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Etusivu</a>
+          </li>
           <li class="nav-item"><a class="nav-link" href="https://joonalindholm.github.io/Karuselli.html">Karuselli</a></li>
           <li class="nav-item"><a class="nav-link" href="https://joonalindholm.github.io/Ruudukko.html">Ruudukko</a></li>
           <li class="nav-item"><a class="nav-link" href="https://joonalindholm.github.io/Kortit.html">Kortit</a></li>
@@ -77,10 +105,14 @@
       </div>
     </div>
   </nav>
-  
+
   <!-- ======= SISÄLTÖ ======= 
    -tekemällä containerit divin sisään sain tehtyä marginaalit mx-2, jotka tulivat kaikille puolille.
+   -hr luo viivan navin jälkeen rajauksena
   -->
+
+  <hr class="opacity-50 ms-2 me-2 p-2">
+
   <main id="main">
 <div class="mx-2">
     <section class="container bg-dark text-white p-3 rounded-5 mt-3" aria-labelledby="etusivu-tervetuloa">
@@ -99,7 +131,7 @@
 </div>
   </main>
 
-  <!-- Footer ja sen säädöt ja linkit. Linkit ja sisältö keskitettynä. -->
+  <!-- Footer ja sen säädöt ja linkit. Linkit ja sisältö keskitettynä. Siirsin logon footeriin, koska se toimi paremmin-->
 
   <footer class="bg-transparent text-light mt-3" aria-label="Sivun alatunniste">
     <div class="container py-3">
@@ -110,7 +142,7 @@
         </a>
 
         <ul class="nav justify-content-center w-100">
-          <li class="nav-item"><a class="nav-link px-2 text-light" href="index.html">Etusivu</a></li>
+          <li class="nav-item"><a class="nav-link px-2 text-light" href="#">Etusivu</a></li>
           <li class="nav-item"><a class="nav-link px-2 text-light" href="https://joonalindholm.github.io/Karuselli.html">Karuselli</a></li>
           <li class="nav-item"><a class="nav-link px-2 text-light" href="https://joonalindholm.github.io/Ruudukko.html">Ruudukko</a></li>
           <li class="nav-item"><a class="nav-link px-2 text-light" href="https://joonalindholm.github.io/Kortit.html">Kortit</a></li>
@@ -119,8 +151,8 @@
         </ul>
       </div>
 
-      <hr class="opacity-50 my-3"></hr>
-<!--Loppuun vielä kommentti tekoälyn luomasta sisällöstä. Yläpuolen hr luo viivan ennen alapuolen tekstiä.-->
+      <hr class="opacity-50 my-3">
+
       <div class="d-flex justify-content-center">
         <small class="opacity-75">
           <em>Sivuston kuvat ja osa teksteistä on luotu tekoälyllä.</em>
@@ -130,5 +162,7 @@
     </div>
   </footer>
 
+</body>
+</html>
 </body>
 </html>
