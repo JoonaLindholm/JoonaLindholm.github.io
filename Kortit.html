@@ -19,52 +19,79 @@
     .navbar .navbar-brand { white-space: normal; }
     .brand-text { line-height: 1.1; }
 
+    /* Logo skaalautuu näytön mukaan. Otin logon pois navista, koska se aiheutti ongelmia
+    .brand-logo {
+    height: clamp(44px, 6vw, 84px);
+    width: auto;
+    object-fit: contain;
+    }
+
     /* Erittäin kapeat näytöt. En saanut aluksi sivua skaalautumaan omaan puhelimeeni ilman tätä, mutta
     lopulta sainkin niin jätin tämän kommentteihin*/
     /*@media (max-width: 400px) {
-      brand-logo { height: 36px; }
-      brand-text { font-size: .9rem; }
+      .brand-logo { height: 36px; }
+      .brand-text { font-size: .9rem; }
     } */
 
   </style>
 </head>
-
+  
+<!-- sivulle harmaa tausta ja tekstit valkoisena -->
 <body class="bg-secondary text-white">
 
-  <!-- NAVIGAATIO
-      - Toimii kapeilla näytöillä.
-      - Navbari läpinäkyväksi 
-       -->
+  <!-- ======= NAVIGAATIO =======
+      - Grid-rakenne estää hampurilaisnapin tippumisen logon alle. Hampurilaisvalikko ei suostunut pysymään paikallaan ilman gridiä.
+      - Toimii kapeilla näytöillä. Gridillä myös oma sivu, mutta toimi jo tässä.
+      - Navbari läpinäkyväksi
+      - Laitoin logon kommentteihin toistaiseksi, kun se ei asettunut nätisti
+  -->
+ <!-- Logon säädöt 
+      <div class="col-1 d-flex align-items-center">
+        <a class="navbar-brand d-flex align-items-center gap-1" href="#" aria-label="Etusivu">
+          <img src="Kuvat/Logo.png" alt="Sivuston logo" height="48" class="me-2">
+        </a>
+      </div>
+-->
 
+  <nav class="navbar container navbar-dark bg-transparent"
+       aria-label="Päävalikko"> 
 
-  <nav class="navbar container navbar-dark bg-transparent" aria-label="Päävalikko"> 
+      <div class="d-flex align-items-start">
+          <img src="Kuvat/Logo.png" alt="Sivuston logo" height="68">
+      </div>
 
-    <div class="d-flex align-items-start">
-      <img src="Kuvat/Logo.png" alt="Sivuston logo" height="68">
-    </div>
+      <!-- Teksti otsikko, Tein omat versiot isolle ja pienelle näytölle-->
 
-    <!-- Teksti otsikko, laitoin strong, että teksti on kuin boldattuna -->
-    <div class="d-flex justify-content-center">
-      <strong class="brand-text">Bootstrap Training Site!</strong>
-    </div>
+<a class="navbar-brand fw-bold" href="#">
 
-    <!-- Hampurilaisnappi ja sen ominaisuuksia -->
-    <div class="d-flex justify-content-end me-2">
-      <button class="navbar-toggler" type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navigaatio"
-              aria-controls="navigaatio"
-              aria-expanded="false"
-              aria-label="Valikon vaihto">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
+  <!-- pienet näytöt -->
+  <span class="fs-6 d-inline d-lg-none">
+    Bootstrap Training Site!
+  </span>
+
+  <!-- Isot näytöt -->
+  <span class="fs-4 d-none d-lg-inline">
+    Bootstrap Training Site!
+  </span>
+
+</a>
+  <!-- Hampurilaisnappi ja sen ominaisuuksia -->
+      <div class="d-flex justify-content-end me-2">
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navigaatio"
+                aria-controls="navigaatio"
+                aria-expanded="false"
+                aria-label="Valikon vaihto">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
 
     <!-- "collapse" valikko joka aukeaa, kun hampurilaisvalikkoa painaa.
          Mukana muotoilua, että linkit ovat siististi ja tulevat napin alapuolelle-->
     <div class="collapse navbar-collapse me-2" id="navigaatio">
       <ul class="navbar-nav w-100 text-end">
-        <!-- tässä osiossa itse linkit -->
+    <!-- tässä osiossa itse linkit -->
         <li class="nav-item"><a class="nav-link" href="index.html">Etusivu</a></li>
         <li class="nav-item"><a class="nav-link" href="Karuselli.html">Karuselli</a></li>
         <li class="nav-item"><a class="nav-link" href="Ruudukko.html">Ruudukko</a></li>
@@ -72,7 +99,9 @@
         <li class="nav-item"><a class="nav-link" href="Haitari">Haitari</a></li>
         <li class="nav-item"><a class="nav-link" href="Taulukko.html">Taulukko</a></li>
       </ul>
-    </div>
+      </div>
+    <!--hr luo viivan navin jälkeen rajauksena. En saanut näkymään ensin, mutta sitten tajusin laittaa sen containeriksi-->
+    <hr class="container opacity-50 mx-2">
   </nav>
 
 <!--Esittely teksti omassa containerissa-->
