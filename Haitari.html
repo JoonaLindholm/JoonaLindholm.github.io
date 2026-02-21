@@ -37,17 +37,26 @@
       - Logo vaihdettu sivuun sopivaksi
        -->
 
-
   <nav class="navbar container navbar-dark bg-transparent" aria-label="Päävalikko"> 
 
     <div class="d-flex align-items-start">
       <img src="Kuvat/Naurulogo.png" alt="Sivuston logo" height="68">
     </div>
 
-    <!-- Teksti otsikko, laitoin strong, että teksti on kuin boldattuna -->
-    <div class="d-flex justify-content-center">
-      <strong class="brand-text">Bootstrap Training Site!</strong>
-    </div>
+<!-- Teksti otsikko, Tein omat versiot isolle ja pienelle näytölle-->
+<a class="navbar-brand fw-bold" href="#">
+
+  <!-- pienet näytöt -->
+  <span class="fs-6 d-inline d-lg-none">
+    Bootstrap Training Site!
+  </span>
+
+  <!-- Isot näytöt -->
+  <span class="fs-4 d-none d-lg-inline">
+    Bootstrap Training Site!
+  </span>
+
+</a>
 
     <!-- Hampurilaisnappi ja sen ominaisuuksia -->
     <div class="d-flex justify-content-end me-2">
@@ -74,6 +83,8 @@
         <li class="nav-item"><a class="nav-link" href="Taulukko.html">Taulukko</a></li>
       </ul>
     </div>
+    <!--hr luo viivan navin jälkeen rajauksena. En saanut näkymään ensin, mutta sitten tajusin laittaa sen containeriksi-->
+    <hr class="container opacity-50 mx-2">
   </nav>
 
   <!-- Otsikko container, jossa sivun esittelyteksti-->
