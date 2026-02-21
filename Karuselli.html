@@ -88,13 +88,14 @@
   
 <!--tässä on pyöristetty container laatikko, jossa tekstiä-->
 <main>
-    <div class="container bg-dark text-white p-3 rounded my-1">
+    <div class="container bg-dark text-white p-3 rounded my-4">
         <h1 class="text-center">Tervetuloa katsomaan kuvakarusellia!</h1>
     </div>
 </main>
 
 <!--Tästä alkaa itse kuvakaruselli osio-->
-<div id="imageCarousel" class="carousel slide my-5" data-bs-ride="carousel">
+<div class="container">
+<div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
 
   <!-- Kuvien alareunan navigaatio indikaattori napit -->
   <div class="carousel-indicators">
@@ -136,7 +137,7 @@ ja d-block (display block) poistaa inline-kuville tyypillisen alareunan välin, 
   <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
     <span class="carousel-control-next-icon"></span>
   </button>
-
+  </div>
 </div>
 
   <!-- Footer ja sen säädöt ja linkit. Linkit ja sisältö keskitettynä. -->
