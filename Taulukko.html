@@ -19,13 +19,6 @@
     .navbar .navbar-brand { white-space: normal; }
     .brand-text { line-height: 1.1; }
 
-    /* Logo skaalautuu näytön mukaan. Otin logon pois navista, koska se aiheutti ongelmia
-    .brand-logo {
-    height: clamp(44px, 6vw, 84px);
-    width: auto;
-    object-fit: contain;
-    }
-
     /* Erittäin kapeat näytöt. En saanut aluksi sivua skaalautumaan omaan puhelimeeni ilman tätä, mutta
     lopulta sainkin niin jätin tämän kommentteihin*/
     /*@media (max-width: 400px) {
@@ -39,19 +32,9 @@
 <!-- sivulle harmaa tausta ja tekstit valkoisena -->
 <body class="bg-secondary text-white">
 
-  <!-- ======= NAVIGAATIO =======
-      - Grid-rakenne estää hampurilaisnapin tippumisen logon alle. Hampurilaisvalikko ei suostunut pysymään paikallaan ilman gridiä.
-      - Toimii kapeilla näytöillä. Gridillä myös oma sivu, mutta toimi jo tässä.
-      - Navbari läpinäkyväksi
-      - Laitoin logon kommentteihin toistaiseksi, kun se ei asettunut nätisti
+  <!-- NAVIGAATIO osuus
+      - Toimii kapeilla näytöillä
   -->
- <!-- Logon säädöt 
-      <div class="col-1 d-flex align-items-center">
-        <a class="navbar-brand d-flex align-items-center gap-1" href="#" aria-label="Etusivu">
-          <img src="Kuvat/Logo.png" alt="Sivuston logo" height="48" class="me-2">
-        </a>
-      </div>
--->
 
   <nav class="navbar container navbar-dark bg-transparent"
        aria-label="Päävalikko"> 
@@ -60,8 +43,7 @@
           <img src="Kuvat/Logo.png" alt="Sivuston logo" height="68">
       </div>
 
-      <!-- Teksti otsikko, Tein omat versiot isolle ja pienelle näytölle-->
-
+<!-- Teksti otsikko, Tein omat versiot isolle ja pienelle näytölle-->
 <a class="navbar-brand fw-bold" href="#">
 
   <!-- pienet näytöt -->
@@ -86,7 +68,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
-      </div>
+    
       <!-- "collapse" valikko joka aukeaa, kun hampurilaisvalikkoa painaa. Mukana muotoilua, että linkit ovat siististi ja tulevat napin alapuolelle-->
       <div class="collapse navbar-collapse me-2" id="navigaatio">
         <ul class="navbar-nav w-100 text-end">
@@ -99,7 +81,6 @@
         <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Taulukko</a></li>
         </ul>
       </div>
-    </div>
     <!--hr luo viivan navin jälkeen rajauksena. En saanut näkymään ensin, mutta sitten tajusin laittaa sen containeriksi-->
     <hr class="container opacity-50 mx-2">
   </nav>
