@@ -80,10 +80,12 @@
 
   <!-- Otsikko ja sivun muut tekstit keskitettynä containerissa -->
   <main>
-    <div class="container bg-dark text-white p-3 rounded my-1">
+    <div class="mx-2">
+      <section class="container bg-dark text-white p-3 rounded-5 my-1">
       <h1 class="text-center">Tällä sivulla on ruudukko!</h1>
       <p class="text-center">Löydätkö erot kuvien välillä!</p>
       <p class="text-center">Tekoäly loi samoista kuvista kaksi eri versiota. Yö ja päivä.</p>
+      </section>
     </div>
   </main>
 
@@ -94,6 +96,17 @@
 -molemmat ruudukot (ruuduko 1 ja 2) ovat omissa containereissa ja se jakaa ne omikseen
 -g-4 tarkoittaa, että col ruudukoiden välille tulee tilaa, muuten kuvat olisivat toisissaan kiinni
 -img-fluid säilyttää kuvan responsiivisena kun näytön koko vaihtuu. Kuvan kuvasuhde pysyy eikä se veny yms.
+
+
+  <div class="mx-2">
+    <section class="container bg-dark text-white p-3 rounded-5 mt-3" aria-labelledby="etusivu-tervetuloa">
+      <h1 id="etusivu-tervetuloa" class="text-center">Tervetuloa sivulleni!</h1>
+      <p class="text-center">
+        Tämä on Bootstrapin avulla tehty sivu. Tarkoituksena on harjoitella Bootstrapin käyttöä.
+      </p>
+    </section>
+</div>
+  
 -->
 
   <!-- Ruudukko 1 -->
@@ -102,12 +115,12 @@
 
       <!-- VASEN KUVA (päivä) -->
       <div class="col-12 col-md-6">
-        <img src="Kuvat/Kesävuoret.png" class="img-fluid rounded w-100" alt="Kesävuoret, päivä">
+        <img src="Kuvat/Kesävuoret.png" class="img-fluid rounded-5 w-100" alt="Kesävuoret, päivä">
       </div>
 
       <!-- OIKEA KUVA (yö) -->
       <div class="col-12 col-md-6">
-        <img src="Kuvat/Kesävuoretyö.png" class="img-fluid rounded w-100" alt="Kesävuoret, yö">
+        <img src="Kuvat/Kesävuoretyö.png" class="img-fluid rounded-5 w-100" alt="Kesävuoret, yö">
       </div>
     </div>
   </div>
@@ -117,12 +130,12 @@
     <div class="row align-items-center g-4">
       <!-- Vasen kuva 50% (päivä) -->
       <div class="col-12 col-md-6">
-        <img src="Kuvat/Kesäpelto.png" class="img-fluid rounded w-100" alt="Kesäpelto, päivä">
+        <img src="Kuvat/Kesäpelto.png" class="img-fluid rounded-5 w-100" alt="Kesäpelto, päivä">
       </div>
 
       <!-- Oikea kuva 50% (yö) -->
       <div class="col-12 col-md-6">
-        <img src="Kuvat/Kesäpeltoyö.png" class="img-fluid rounded w-100" alt="Kesäpelto, yö">
+        <img src="Kuvat/Kesäpeltoyö.png" class="img-fluid rounded-5 w-100" alt="Kesäpelto, yö">
       </div>
     </div>
   </div>
